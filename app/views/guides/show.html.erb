@@ -1,0 +1,9 @@
+<p><%= link_to "Guides", guides_path %> / <%= @guide.cleaning_area %></p>  
+ <h1><%= @guide.cleaning_area %></h1>
+ <h2><%= @guide.cleaning_guide %></h2>
+
+  <p><%= link_to 'Edit', edit_guide_path(@guide) %></p>
+
+  <%= form_for @guide, :method => :delete do |f| %>
+  <%= f.submit 'Destroy' %>
+<% end %>

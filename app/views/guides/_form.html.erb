@@ -1,0 +1,22 @@
+<% if @guide.errors.any? %>
+  <b>Errors:</b>
+  <ul>
+  <% @guide.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+<% end %>
+
+
+
+<h1>Add cleaning guide</h1>
+
+ <%= form_for @guide do |f| %>
+    <%= f.label :cleaning_area %>
+    <%= f.text_field :cleaning_area %>
+
+    <%= f.label :cleaning_guide %>
+    <%= f.text_field :cleaning_guide %>
+
+    <%= f.submit %>
+ <% end %>
